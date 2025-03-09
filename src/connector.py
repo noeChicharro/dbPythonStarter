@@ -14,11 +14,13 @@ else:
 
 cursor = connection.cursor()
 
+cursor.execute('DROP TABLE IF EXISTS valueYear')
+
 create_value_tabel = '''
-CREATE TABLE IF NOT EXISTS value (
+CREATE TABLE IF NOT EXISTS valueYear (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    value INT NOT NULL,
-    date DATE NOT NULL
+    year VARCHAR(30) NOT NULL,
+    value VARCHAR(30) NOT NULL
 )
 '''
 
