@@ -25,4 +25,5 @@ spain = spain.round()
 spain = spain.loc[:, ~spain.columns.str.contains('^Unnamed')]
 print(spain.head())
 
-spain.to_sql('valueYear', con=engine, if_exists='append', index=False)
+# add to database (following code is commendted to not add the same data multiple times)
+#spain.to_sql('valueYear', con=engine, if_exists='append', index=False)
